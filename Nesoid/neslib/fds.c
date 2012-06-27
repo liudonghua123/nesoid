@@ -34,7 +34,7 @@
 #include "general.h"
 #include "state.h"
 #include "file.h"
-#include "memory.h"
+#include "_memory.h"
 #include "cart.h"
 #include "md5.h"
 #include "netplay.h"

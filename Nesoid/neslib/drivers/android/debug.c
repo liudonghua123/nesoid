@@ -1,5 +1,4 @@
 #define LOG_TAG "libnes"
-#include <cutils/log.h>
 
 void FCEUD_PrintError(char *s)
 {

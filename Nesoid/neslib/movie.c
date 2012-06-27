@@ -7,7 +7,7 @@
 #endif
 
 #include "types.h"
-#include "endian.h"
+#include "_endian.h"
 #include "input.h"
 #include "fce.h"
 #include "svga.h"

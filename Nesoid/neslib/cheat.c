@@ -29,7 +29,7 @@
 #include "fce.h"
 #include "general.h"
 #include "cart.h"
-#include "memory.h"
+#include "_memory.h"
 
 #include "file.h"
 #include "svga.h"

@@ -2,7 +2,7 @@
 #include "../x6502.h"
 #include "../fce.h"
 #include "../ppu.h"
-#include "../memory.h"
+#include "../_memory.h"
 #include "../sound.h"
 #include "../state.h"
 #include "../cart.h"

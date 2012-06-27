@@ -22,7 +22,7 @@
 
 #include "types.h"
 #include "fce.h"
-#include "memory.h"
+#include "_memory.h"
 #include "general.h"
 #include "svga.h"
 

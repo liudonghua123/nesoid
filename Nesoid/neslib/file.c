@@ -29,8 +29,8 @@
 
 #include "types.h"
 #include "file.h"
-#include "endian.h"
-#include "memory.h"
+#include "_endian.h"
+#include "_memory.h"
 #include "driver.h"
 #include "svga.h"
 

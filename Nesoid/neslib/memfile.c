@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "memfile.h"
 #include "fileio.h"
-#include "endian.h"
+#include "_endian.h"
 
 struct _MEMFILE {
 	const char *filename;

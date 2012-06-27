@@ -24,7 +24,7 @@
 
 #include <stdio.h>
 #include "types.h"
-#include "endian.h"
+#include "_endian.h"
 
 static uint8 s[4];
 

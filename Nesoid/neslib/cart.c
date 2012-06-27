@@ -32,7 +32,7 @@
 #include "ppu098.h"
 
 #include "cart.h"
-#include "memory.h"
+#include "_memory.h"
 #include "x6502.h"
 
 #include "general.h"

@@ -40,7 +40,7 @@
 #include "svga.h"
 #include "version.h"
 #include "general.h"
-#include "memory.h"
+#include "_memory.h"
 
 uint8 *XBuf=NULL;
 

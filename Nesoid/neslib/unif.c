@@ -34,9 +34,9 @@
 #include  "ines.h"
 #include  "general.h"
 #include  "state.h"
-#include  "endian.h"
+#include  "_endian.h"
 #include  "file.h"
-#include  "memory.h"
+#include  "_memory.h"
 #include  "input.h"
 #include  "md5.h"
 

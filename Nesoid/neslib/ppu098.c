@@ -27,7 +27,7 @@
 #include  "ppu098.h"
 #include  "nsf.h"
 #include  "sound.h"
-#include  "memory.h"
+#include  "_memory.h"
 
 #include  "cart.h"
 #include  "palette.h"

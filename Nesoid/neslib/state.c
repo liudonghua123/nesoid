@@ -34,11 +34,11 @@
 #define INESPRIV                // Take this out when old save state support is removed in a future version.
 #include "ines.h"
 #include "svga.h"
-#include "endian.h"
+#include "_endian.h"
 #include "fds.h"
 #include "general.h"
 #include "state.h"
-#include "memory.h"
+#include "_memory.h"
 #include "ppu.h"
 
 static void (*SPreSave)(void) = 0;

@@ -5,6 +5,7 @@ extern "C" {
 void CloseGame();
 }
 
+#include <cstring>
 #define LOG_TAG "libnes"
 #include <utils/Log.h>
 #include "emuengine.h"

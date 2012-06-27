@@ -31,9 +31,9 @@
 #include	"svga.h"
 #include	"netplay.h"
 #include	"general.h"
-#include	"endian.h"
+#include	"_endian.h"
 #include	"version.h"
-#include        "memory.h"
+#include        "_memory.h"
 
 #include	"cart.h"
 #include	"nsf.h"
