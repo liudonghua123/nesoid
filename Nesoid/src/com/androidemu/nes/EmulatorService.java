@@ -49,9 +49,10 @@ public class EmulatorService extends Service {
     private NotificationManager mNM;
     private Method mStartForeground;
     private Method mStopForeground;
+    private Method mSetForeground = null;
     private Object[] mStartForegroundArgs = new Object[2];
     private Object[] mStopForegroundArgs = new Object[1];
-    
+
     @Override
     public void onCreate() {
         mNM = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
@@ -63,6 +64,11 @@ public class EmulatorService extends Service {
         } catch (NoSuchMethodException e) {
             // Running on an older platform.
             mStartForeground = mStopForeground = null;
+            try {
+                mSetForeground = getClass().getMethod("setForeground", mStopForegroundSignature);
+            } catch (NoSuchMethodException crap) {
+                Log.w(LOG_TAG, "OS doesn't have Service.startForeground OR Service.setForeground!", crap);
+            }
         }
     }
 
@@ -128,7 +134,19 @@ public class EmulatorService extends Service {
         }
         
         // Fall back on the old API.
-        setForeground(true);
+        if (mSetForeground != null) {
+            mStopForegroundArgs[0] = Boolean.TRUE;
+            try {
+                mSetForeground.invoke(this, mStopForegroundArgs);
+            } catch (InvocationTargetException e) {
+                // Should not happen.
+                Log.w(LOG_TAG, "Unable to invoke setForeground", e);
+            } catch (IllegalAccessException e) {
+                // Should not happen.
+                Log.w(LOG_TAG, "Unable to invoke setForeground", e);
+            }
+            return;
+        }
         mNM.notify(id, notification);
     }
     
@@ -155,7 +173,19 @@ public class EmulatorService extends Service {
         // Fall back on the old API.  Note to cancel BEFORE changing the
         // foreground state, since we could be killed at that point.
         mNM.cancel(id);
-        setForeground(false);
+        if (mSetForeground != null) {
+            mStopForegroundArgs[0] = Boolean.FALSE;
+            try {
+                mSetForeground.invoke(this, mStopForegroundArgs);
+            } catch (InvocationTargetException e) {
+                // Should not happen.
+                Log.w(LOG_TAG, "Unable to invoke setForeground", e);
+            } catch (IllegalAccessException e) {
+                // Should not happen.
+                Log.w(LOG_TAG, "Unable to invoke setForeground", e);
+            }
+            return;
+        }
     }
     
     @Override

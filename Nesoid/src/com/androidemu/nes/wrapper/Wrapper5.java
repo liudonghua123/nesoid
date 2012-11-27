@@ -1,10 +1,13 @@
 package com.androidemu.nes.wrapper;
 
+import android.annotation.TargetApi;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.view.MotionEvent;
 
+@TargetApi(Build.VERSION_CODES.ECLAIR)
 class Wrapper5 {
 
 	public static final boolean isBluetoothPresent() {
