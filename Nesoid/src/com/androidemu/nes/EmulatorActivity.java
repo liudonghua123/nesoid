@@ -58,7 +58,8 @@ public class EmulatorActivity extends Activity implements
 		View.OnTouchListener,
 		EmulatorView.OnTrackballListener,
 		Emulator.OnFrameDrawnListener,
-		GameKeyListener {
+		GameKeyListener, 
+		Keycodes {
 
 	private static final String LOG_TAG = "Nesoid";
 
@@ -76,9 +77,9 @@ public class EmulatorActivity extends Activity implements
 	private static final int MESSAGE_SYNC_CLIENT = 1000;
 
 	private static final int GAMEPAD_LEFT_RIGHT =
-			(Emulator.GAMEPAD_LEFT | Emulator.GAMEPAD_RIGHT);
+			(Keycodes.GAMEPAD_LEFT | Keycodes.GAMEPAD_RIGHT);
 	private static final int GAMEPAD_UP_DOWN =
-			(Emulator.GAMEPAD_UP | Emulator.GAMEPAD_DOWN);
+			(Keycodes.GAMEPAD_UP | Keycodes.GAMEPAD_DOWN);
 	private static final int GAMEPAD_DIRECTION =
 			(GAMEPAD_UP_DOWN | GAMEPAD_LEFT_RIGHT);
 
@@ -620,14 +621,14 @@ public class EmulatorActivity extends Activity implements
 		int key2 = 0;
 
 		if (duration1 < 0)
-			key1 = Emulator.GAMEPAD_LEFT;
+			key1 = Keycodes.GAMEPAD_LEFT;
 		else if (duration1 > 0)
-			key1 = Emulator.GAMEPAD_RIGHT;
+			key1 = Keycodes.GAMEPAD_RIGHT;
 
 		if (duration2 < 0)
-			key2 = Emulator.GAMEPAD_UP;
+			key2 = Keycodes.GAMEPAD_UP;
 		else if (duration2 > 0)
-			key2 = Emulator.GAMEPAD_DOWN;
+			key2 = Keycodes.GAMEPAD_DOWN;
 
 		if (key1 == 0 && key2 == 0)
 			return false;
@@ -725,14 +726,14 @@ public class EmulatorActivity extends Activity implements
 
 	private int flipGameKeys(int keys) {
 		int newKeys = (keys & ~GAMEPAD_DIRECTION);
-		if ((keys & Emulator.GAMEPAD_LEFT) != 0)
-			newKeys |= Emulator.GAMEPAD_RIGHT;
-		if ((keys & Emulator.GAMEPAD_RIGHT) != 0)
-			newKeys |= Emulator.GAMEPAD_LEFT;
-		if ((keys & Emulator.GAMEPAD_UP) != 0)
-			newKeys |= Emulator.GAMEPAD_DOWN;
-		if ((keys & Emulator.GAMEPAD_DOWN) != 0)
-			newKeys |= Emulator.GAMEPAD_UP;
+		if ((keys & Keycodes.GAMEPAD_LEFT) != 0)
+			newKeys |= Keycodes.GAMEPAD_RIGHT;
+		if ((keys & Keycodes.GAMEPAD_RIGHT) != 0)
+			newKeys |= Keycodes.GAMEPAD_LEFT;
+		if ((keys & Keycodes.GAMEPAD_UP) != 0)
+			newKeys |= Keycodes.GAMEPAD_DOWN;
+		if ((keys & Keycodes.GAMEPAD_DOWN) != 0)
+			newKeys |= Keycodes.GAMEPAD_UP;
 
 		return newKeys;
 	}

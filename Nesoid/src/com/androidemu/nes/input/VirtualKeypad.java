@@ -14,17 +14,16 @@ import android.view.MotionEvent;
 import android.view.View;
 import java.util.ArrayList;
 
-import com.androidemu.Emulator;
 import com.androidemu.nes.R;
 import com.androidemu.nes.wrapper.Wrapper;
 
-public class VirtualKeypad {
+public class VirtualKeypad implements Keycodes {
 
 	private static final int DPAD_4WAY[] = {
-		Emulator.GAMEPAD_LEFT,
-		Emulator.GAMEPAD_UP,
-		Emulator.GAMEPAD_RIGHT,
-		Emulator.GAMEPAD_DOWN
+		Keycodes.GAMEPAD_LEFT,
+		Keycodes.GAMEPAD_UP,
+		Keycodes.GAMEPAD_RIGHT,
+		Keycodes.GAMEPAD_DOWN
 	};
 
 	private static final float DPAD_DEADZONE_VALUES[] = {
@@ -51,8 +50,6 @@ public class VirtualKeypad {
 	private Control buttons;
 	private Control extraButtons;
 	private Control selectStart;
-
-	private Emulator emulator = Emulator.getInstance();
 
 	public VirtualKeypad(View v, GameKeyListener l) {
 		view = v;
@@ -258,13 +255,13 @@ public class VirtualKeypad {
 		int states = 0;
 
 		if (x < cx - dpadDeadZone)
-			states |= Emulator.GAMEPAD_LEFT;
+			states |= Keycodes.GAMEPAD_LEFT;
 		else if (x > cx + dpadDeadZone)
-			states |= Emulator.GAMEPAD_RIGHT;
+			states |= Keycodes.GAMEPAD_RIGHT;
 		if (y < cy - dpadDeadZone)
-			states |= Emulator.GAMEPAD_UP;
+			states |= Keycodes.GAMEPAD_UP;
 		else if (y > cy + dpadDeadZone)
-			states |= Emulator.GAMEPAD_DOWN;
+			states |= Keycodes.GAMEPAD_DOWN;
 
 		return states;
 	}
@@ -287,7 +284,7 @@ public class VirtualKeypad {
 	}
 
 	private int getSelectStartStates(float x, float y) {
-		return (x < 0.5f ? Emulator.GAMEPAD_SELECT : Emulator.GAMEPAD_START);
+		return (x < 0.5f ? Keycodes.GAMEPAD_SELECT : Keycodes.GAMEPAD_START);
 	}
 
 	private float getEventX(MotionEvent event, int index, boolean flip) {
@@ -313,11 +310,11 @@ public class VirtualKeypad {
 	}
 
 	private static final int[] BUTTONS = {
-		Emulator.GAMEPAD_B, Emulator.GAMEPAD_A
+		Keycodes.GAMEPAD_B, Keycodes.GAMEPAD_A
 	};
 
 	private static final int[] EXTRA_BUTTONS = {
-		Emulator.GAMEPAD_B_TURBO, Emulator.GAMEPAD_A_TURBO
+		Keycodes.GAMEPAD_B_TURBO, Keycodes.GAMEPAD_A_TURBO
 	};
 
 	private int getControlStates(Control c, float x, float y, float size) {

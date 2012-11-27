@@ -18,10 +18,11 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import com.androidemu.Emulator;
+import com.androidemu.nes.input.Keycodes;
 import com.androidemu.nes.wrapper.Wrapper;
 
 public class EmulatorSettings extends PreferenceActivity
-		implements Preference.OnPreferenceChangeListener {
+		implements Preference.OnPreferenceChangeListener, Keycodes {
 
 	private static final String SEARCH_ROM_URI =
 			"http://www.romfind.com/nes-roms.html?sid=YONG";
@@ -38,21 +39,21 @@ public class EmulatorSettings extends PreferenceActivity
 	private static final int REQUEST_FDS_ROM = 101;
 
 	public static final int[] gameKeys = {
-		Emulator.GAMEPAD_UP,
-		Emulator.GAMEPAD_DOWN,
-		Emulator.GAMEPAD_LEFT,
-		Emulator.GAMEPAD_RIGHT,
-		Emulator.GAMEPAD_UP_LEFT,
-		Emulator.GAMEPAD_UP_RIGHT,
-		Emulator.GAMEPAD_DOWN_LEFT,
-		Emulator.GAMEPAD_DOWN_RIGHT,
-		Emulator.GAMEPAD_SELECT,
-		Emulator.GAMEPAD_START,
-		Emulator.GAMEPAD_A,
-		Emulator.GAMEPAD_B,
-		Emulator.GAMEPAD_A_TURBO,
-		Emulator.GAMEPAD_B_TURBO,
-		Emulator.GAMEPAD_AB,
+		Keycodes.GAMEPAD_UP,
+		Keycodes.GAMEPAD_DOWN,
+		Keycodes.GAMEPAD_LEFT,
+		Keycodes.GAMEPAD_RIGHT,
+		Keycodes.GAMEPAD_UP_LEFT,
+		Keycodes.GAMEPAD_UP_RIGHT,
+		Keycodes.GAMEPAD_DOWN_LEFT,
+		Keycodes.GAMEPAD_DOWN_RIGHT,
+		Keycodes.GAMEPAD_SELECT,
+		Keycodes.GAMEPAD_START,
+		Keycodes.GAMEPAD_A,
+		Keycodes.GAMEPAD_B,
+		Keycodes.GAMEPAD_A_TURBO,
+		Keycodes.GAMEPAD_B_TURBO,
+		Keycodes.GAMEPAD_AB,
 	};
 
 	public static final String[] gameKeysPref = {

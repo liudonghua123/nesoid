@@ -6,10 +6,8 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.util.Log;
-import com.androidemu.Emulator;
 
-public class SensorKeypad implements SensorEventListener {
+public class SensorKeypad implements SensorEventListener, Keycodes {
 
 	private static final float THRESHOLD_VALUES[] = {
 		30.0f, 20.0f, 15.0f, 10.0f, 8.0f,
@@ -74,9 +72,9 @@ public class SensorKeypad implements SensorEventListener {
 
 		int states = 0;
 		if (leftRight < -threshold)
-			states |= Emulator.GAMEPAD_LEFT;
+			states |= Keycodes.GAMEPAD_LEFT;
 		else if (leftRight > threshold)
-			states |= Emulator.GAMEPAD_RIGHT;
+			states |= Keycodes.GAMEPAD_RIGHT;
 /*
 		if (upDown < -THRESHOLD)
 			states |= Emulator.GAMEPAD_UP;
