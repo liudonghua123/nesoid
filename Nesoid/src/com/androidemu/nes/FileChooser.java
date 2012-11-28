@@ -85,10 +85,6 @@ public class FileChooser extends ListActivity implements
 		case R.id.menu_refresh:
 			changeTo(currentDir);
 			return true;
-
-		case R.id.menu_rom_gripper:
-			startROMGripper();
-			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -146,10 +142,6 @@ public class FileChooser extends ListActivity implements
 
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.rom_gripper:
-			startROMGripper();
-			break;
-
 		case R.id.goto_sdcard:
 			changeTo(sdcardDir);
 			break;
@@ -210,17 +202,5 @@ public class FileChooser extends ListActivity implements
 		Collections.sort(items, String.CASE_INSENSITIVE_ORDER);
 		setListAdapter(new ArrayAdapter(this,
 				android.R.layout.simple_list_item_1, items));
-	}
-
-	private void startROMGripper() {
-		Intent intent = new Intent(ROM_GRIPPER_ACTION);
-		intent.putExtra("romtype", "NES");
-		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		try {
-			startActivity(intent);
-		} catch (ActivityNotFoundException e) {
-			intent = new Intent(Intent.ACTION_VIEW, ROM_GRIPPER_URI);
-			startActivity(intent);
-		}
 	}
 }
