@@ -1,3 +1,3 @@
 APP_BUILD_SCRIPT = $(APP_PROJECT_PATH)/Android.mk
 
-JNI_H_INCLUDE = $(APP_PROJECT_PATH)/../common/libnativehelper/include/
+EMU_LIBRARY_PATH = $(APP_PROJECT_PATH)/../../emudroid-common/

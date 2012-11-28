@@ -3,5 +3,6 @@ bin/*
 bin
 /gen
 /obj
+obj
 libs/armeabi/*.so
 project.properties

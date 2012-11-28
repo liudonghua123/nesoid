@@ -197,8 +197,8 @@ LOCAL_SRC_FILES += \
 	drivers/android/nesengine.cpp
 
 LOCAL_C_INCLUDES += \
-	$(JNI_H_INCLUDE) \
-	$(LOCAL_PATH)/../../common \
+	$(EMU_LIBRARY_PATH)/jni/libnativehelper/include/ \
+	$(EMU_LIBRARY_PATH)/jni/ \
 	external/zlib
 
 LOCAL_LDLIBS := -lz -llog
