@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import java.io.File;
 
-public class MainActivity extends FileChooser {
+public class NESActivity extends FileChooser {
 
 	private static final Uri HELP_URI = Uri.parse(
 			"file:///android_asset/faq.html");
@@ -130,7 +130,7 @@ public class MainActivity extends FileChooser {
 							emulatorIntent);
 					intent.putExtra(Intent.EXTRA_SHORTCUT_NAME, name);
 					Parcelable icon = Intent.ShortcutIconResource.fromContext(
-							MainActivity.this, R.drawable.app_icon);
+							NESActivity.this, R.drawable.app_icon);
 					intent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, icon);
 
 					setResult(RESULT_OK, intent);

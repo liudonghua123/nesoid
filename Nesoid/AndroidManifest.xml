@@ -16,7 +16,7 @@
 	<application android:label="@string/app_label"
 			android:icon="@drawable/app_icon">
 
-		<activity android:name="MainActivity"
+		<activity android:name="com.androidemu.nes.NESActivity"
 				android:configChanges="orientation|keyboardHidden">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,7 @@
 		</activity>
 
 		<activity-alias android:name="CreateShortcuts"
-				android:targetActivity="MainActivity"
+				android:targetActivity="com.androidemu.nes.NESActivity"
 				android:label="@string/launcher_shortcut_name">
 			<intent-filter>
 				<action android:name="android.intent.action.CREATE_SHORTCUT" />
