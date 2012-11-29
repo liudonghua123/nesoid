@@ -26,7 +26,7 @@ import com.androidemu.FileChooser;
 
 import com.androidemu.nes.input.Keycodes;
 
-import com.androidemu.nes.wrapper.Wrapper;
+import com.androidemu.wrapper.Wrapper;
 
 public class EmulatorSettings extends PreferenceActivity implements
 		Preference.OnPreferenceChangeListener, Keycodes

@@ -75,7 +75,7 @@ import com.androidemu.nes.R;
 import com.androidemu.nes.StateSlotsActivity;
 import com.androidemu.nes.input.*;
 
-import com.androidemu.nes.wrapper.Wrapper;
+import com.androidemu.wrapper.Wrapper;
 
 public class EmulatorActivity extends Activity implements Emulator.FrameUpdateListener,
 		SharedPreferences.OnSharedPreferenceChangeListener, SurfaceHolder.Callback,

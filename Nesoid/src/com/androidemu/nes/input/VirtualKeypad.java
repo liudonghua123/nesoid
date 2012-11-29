@@ -21,7 +21,7 @@ import android.preference.PreferenceManager;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.androidemu.nes.wrapper.Wrapper;
+import com.androidemu.wrapper.Wrapper;
 
 import com.androidemu.nes.R;
 
