@@ -31,11 +31,8 @@ import com.androidemu.nes.wrapper.Wrapper;
 public class EmulatorSettings extends PreferenceActivity implements
 		Preference.OnPreferenceChangeListener, Keycodes
 {
-
-	private static final String SEARCH_ROM_URI = "http://www.romfind.com/nes-roms.html?sid=YONG";
 	private static final Uri ABOUT_URI = Uri.parse("file:///android_asset/about.html");
 	private static final String MARKET_URI = "http://market.android.com/details?id=";
-	private static final String GAME_GRIPPER_URI = "https://sites.google.com/site/gamegripper";
 
 	private static final int REQUEST_LOAD_KEY_PROFILE = 1;
 	private static final int REQUEST_SAVE_KEY_PROFILE = 2;
@@ -74,12 +71,6 @@ public class EmulatorSettings extends PreferenceActivity implements
 		if (gameKeysPref.length != n || gameKeysPref2.length != n
 				|| gameKeysName.length != n)
 			throw new AssertionError("Key configurations are not consistent");
-	}
-
-	public static Intent getSearchROMIntent()
-	{
-		return new Intent(Intent.ACTION_VIEW, Uri.parse(SEARCH_ROM_URI))
-				.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 	}
 
 	// FIXME
@@ -180,10 +171,6 @@ public class EmulatorSettings extends PreferenceActivity implements
 				new Intent(this, HelpActivity.class).setData(ABOUT_URI));
 		findPreference("upgrade").setIntent(
 				new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URI + getPackageName())));
-		findPreference("searchRoms").setIntent(getSearchROMIntent());
-
-		findPreference("gameGripper").setIntent(
-				new Intent(Intent.ACTION_VIEW, Uri.parse(GAME_GRIPPER_URI)));
 	}
 
 	@Override

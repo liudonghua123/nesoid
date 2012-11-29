@@ -272,8 +272,6 @@
 				android:title="@string/about"/>
 		<PreferenceScreen android:key="upgrade"
 				android:title="@string/upgrade"/>
-		<PreferenceScreen android:key="searchRoms"
-				android:title="@string/search_roms"/>
 	</PreferenceScreen>
 
 </PreferenceScreen>

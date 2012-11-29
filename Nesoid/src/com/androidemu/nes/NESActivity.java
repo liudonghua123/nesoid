@@ -60,10 +60,6 @@ public class NESActivity extends FileChooser
 	{
 		switch (item.getItemId())
 		{
-			case R.id.menu_search_roms:
-				startActivity(EmulatorSettings.getSearchROMIntent());
-				return true;
-
 			case R.id.menu_help:
 				startActivity(new Intent(this, HelpActivity.class).setData(HELP_URI));
 				return true;
