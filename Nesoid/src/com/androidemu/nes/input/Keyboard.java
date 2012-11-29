@@ -5,9 +5,6 @@ import android.view.View;
 
 public class Keyboard implements View.OnKeyListener
 {
-
-	private static final String LOG_TAG = "Keyboard";
-
 	private GameKeyListener gameKeyListener;
 	private int[] keysMap = new int[128];
 	private int keyStates;

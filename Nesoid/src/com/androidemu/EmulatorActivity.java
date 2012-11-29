@@ -1291,10 +1291,10 @@ public class EmulatorActivity extends Activity implements Emulator.FrameUpdateLi
 
 	private void onScreenshot()
 	{
-		File dir = new File("/sdcard/screenshot");
-		if (!dir.exists() && !dir.mkdir())
+		File dir = Wrapper.getExternalScreenshotDirectory();
+		if (!dir.exists() && !dir.mkdirs())
 		{
-			Log.w(LOG_TAG, "Could not create directory for screenshots");
+			Log.w(LOG_TAG, "Could not create directory for screenshots: " + dir.getPath());
 			return;
 		}
 		String name = Long.toString(System.currentTimeMillis()) + ".png";
