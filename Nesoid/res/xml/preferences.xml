@@ -75,9 +75,6 @@
 				android:title="@string/key_mappings"
 				android:summary="@string/key_mappings_summary">
 
-			<Preference android:key="gameGripper"
-					android:layout="@layout/game_gripper"/>
-
 			<PreferenceCategory android:title="@string/key_profiles">
 				<PreferenceScreen android:key="loadKeyProfile"
 						android:title="@string/load_profile"/>
