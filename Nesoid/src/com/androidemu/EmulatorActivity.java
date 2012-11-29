@@ -1,4 +1,4 @@
-package com.androidemu.nes;
+package com.androidemu;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -65,6 +65,19 @@ import com.androidemu.Emulator;
 import com.androidemu.EmulatorView;
 import com.androidemu.EmuMedia;
 
+import com.androidemu.nes.CheatsActivity;
+import com.androidemu.nes.DefaultPreferences;
+import com.androidemu.nes.DeviceListActivity;
+import com.androidemu.nes.EmulatorSettings;
+import com.androidemu.nes.MediaScanner;
+import com.androidemu.nes.NetPlayService;
+import com.androidemu.nes.R;
+import com.androidemu.nes.StateSlotsActivity;
+import com.androidemu.nes.R.array;
+import com.androidemu.nes.R.id;
+import com.androidemu.nes.R.layout;
+import com.androidemu.nes.R.menu;
+import com.androidemu.nes.R.string;
 import com.androidemu.nes.input.*;
 
 import com.androidemu.nes.wrapper.Wrapper;

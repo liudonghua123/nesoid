@@ -46,7 +46,7 @@
 		<activity android:name="CheatsActivity" android:process=":emulator"/>
 		<activity android:name="EmulatorSettings" android:process=":emulator"/>
 
-		<activity android:name="EmulatorActivity"
+		<activity android:name="com.androidemu.EmulatorActivity"
 				android:process=":emulator"
 				android:launchMode="singleTask"
 				android:configChanges="orientation|keyboardHidden">
@@ -59,7 +59,7 @@
 			</intent-filter>
 		</activity>
 
-		<service android:name="EmulatorService" android:process=":emulator"/>
+		<service android:name="com.androidemu.EmulatorService" android:process=":emulator"/>
 
 	</application>
 </manifest>

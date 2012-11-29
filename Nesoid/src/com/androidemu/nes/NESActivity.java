@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
+import com.androidemu.EmulatorActivity;
 import com.androidemu.FileChooser;
 
 public class NESActivity extends FileChooser
