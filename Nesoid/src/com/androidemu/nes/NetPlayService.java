@@ -1,22 +1,27 @@
 package com.androidemu.nes;
 
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothServerSocket;
-import android.bluetooth.BluetoothSocket;
-import android.os.Handler;
-import android.os.Message;
 import java.io.InputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.ProtocolException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.ByteBuffer;
-import java.util.Set;
+
 import java.util.UUID;
+
+import android.annotation.TargetApi;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothServerSocket;
+import android.bluetooth.BluetoothSocket;
+
+import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
 
 public class NetPlayService
 {
@@ -327,6 +332,7 @@ public class NetPlayService
 		}
 	}
 
+	@TargetApi(Build.VERSION_CODES.ECLAIR)
 	private class BluetoothServerThread extends NetThread
 	{
 		private BluetoothServerSocket serverSocket;
@@ -369,6 +375,7 @@ public class NetPlayService
 		}
 	}
 
+	@TargetApi(Build.VERSION_CODES.ECLAIR)
 	private class BluetoothClientThread extends NetThread
 	{
 		private BluetoothAdapter adapter;

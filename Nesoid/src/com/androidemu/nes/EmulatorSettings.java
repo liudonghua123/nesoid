@@ -86,12 +86,12 @@ public class EmulatorSettings extends PreferenceActivity implements
 
 	private Map<String, Integer> getKeyMappings()
 	{
-		TreeMap mappings = new TreeMap<String, Integer>();
+		TreeMap<String, Integer> mappings = new TreeMap<String, Integer>();
 
 		for (String key : getAllKeyPrefs())
 		{
 			KeyPreference pref = (KeyPreference) findPreference(key);
-			mappings.put(key, new Integer(pref.getKeyValue()));
+			mappings.put(key, Integer.valueOf(pref.getKeyValue()));
 		}
 		return mappings;
 	}

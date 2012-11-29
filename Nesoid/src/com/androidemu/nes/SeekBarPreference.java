@@ -2,18 +2,19 @@ package com.androidemu.nes;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+
 import android.preference.DialogPreference;
+
 import android.util.AttributeSet;
-import android.util.Log;
+
 import android.view.View;
+
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class SeekBarPreference extends DialogPreference implements
 		SeekBar.OnSeekBarChangeListener
 {
-
-	private static final String LOG_TAG = "SeekBarPreference";
 	private static final String NS = "http://androidemu.com/apk/res/android";
 
 	private SeekBar seekBar;
