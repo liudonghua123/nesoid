@@ -65,7 +65,6 @@ import com.androidemu.Emulator;
 import com.androidemu.EmulatorView;
 import com.androidemu.EmuMedia;
 
-import com.androidemu.nes.CheatsActivity;
 import com.androidemu.nes.DefaultPreferences;
 import com.androidemu.nes.DeviceListActivity;
 import com.androidemu.nes.EmulatorSettings;

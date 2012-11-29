@@ -34,16 +34,11 @@
 			</intent-filter>
 		</activity-alias>
 
-		<activity android:name="FileChooser" />
-		<activity android:name="StateSlotsActivity"
-				android:theme="@android:style/Theme.Dialog" />
-		<activity android:name="KeyProfilesActivity"/>
-		<activity android:name="HelpActivity" />
-		<activity android:name="DeviceListActivity"
-				android:theme="@android:style/Theme.Dialog"
+		<activity android:name="StateSlotsActivity" android:theme="@android:style/Theme.Dialog" />
+		<activity android:name="DeviceListActivity" android:theme="@android:style/Theme.Dialog"
 				android:configChanges="orientation|keyboardHidden" />
+		<activity android:name="KeyProfilesActivity"/>
 
-		<activity android:name="CheatsActivity" android:process=":emulator"/>
 		<activity android:name="EmulatorSettings" android:process=":emulator"/>
 
 		<activity android:name="com.androidemu.EmulatorActivity"
@@ -59,6 +54,10 @@
 			</intent-filter>
 		</activity>
 
+		<!-- common components - will be omitted after manifest merging support -->
+		<activity android:name="com.androidemu.FileChooser" />
+		<activity android:name="com.androidemu.HelpActivity" />
+		<activity android:name="com.androidemu.CheatsActivity" android:process=":emulator"/>
 		<service android:name="com.androidemu.EmulatorService" android:process=":emulator"/>
 
 	</application>

@@ -23,11 +23,13 @@ import android.preference.PreferenceScreen;
 import android.widget.Toast;
 
 import com.androidemu.FileChooser;
+import com.androidemu.HelpActivity;
 
 import com.androidemu.nes.input.Keycodes;
 
 import com.androidemu.wrapper.Wrapper;
 
+@SuppressWarnings("deprecation")
 public class EmulatorSettings extends PreferenceActivity implements
 		Preference.OnPreferenceChangeListener, Keycodes
 {

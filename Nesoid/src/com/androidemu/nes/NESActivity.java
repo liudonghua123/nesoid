@@ -22,6 +22,7 @@ import android.widget.EditText;
 
 import com.androidemu.EmulatorActivity;
 import com.androidemu.FileChooser;
+import com.androidemu.HelpActivity;
 
 public class NESActivity extends FileChooser
 {
