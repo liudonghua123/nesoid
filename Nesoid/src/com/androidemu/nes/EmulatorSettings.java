@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import com.androidemu.Emulator;
+import com.androidemu.FileChooser;
 import com.androidemu.nes.input.Keycodes;
 import com.androidemu.nes.wrapper.Wrapper;
 

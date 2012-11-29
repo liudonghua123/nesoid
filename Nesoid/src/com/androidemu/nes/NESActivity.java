@@ -14,6 +14,8 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import java.io.File;
 
+import com.androidemu.FileChooser;
+
 public class NESActivity extends FileChooser {
 
 	private static final Uri HELP_URI = Uri.parse(
