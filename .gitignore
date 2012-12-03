@@ -1,8 +1,7 @@
-gen
-bin/*
-bin
-/gen
-/obj
-obj
-libs/armeabi/*.so
+/gen/
+/obj/
+/bin/
+/libs/
 project.properties
+.DS_Store
+*~
