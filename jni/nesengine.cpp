@@ -1,6 +1,6 @@
 extern "C" {
-#include "../../driver.h"
-#include "../../fce.h"
+#include "neslib/driver.h"
+#include "neslib/fce.h"
 
 void CloseGame();
 }

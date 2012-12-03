@@ -1,4 +1,4 @@
-LOCAL_PATH:= $(call my-dir)
+LOCAL_PATH:= $(call my-dir)/neslib
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := user
@@ -191,15 +191,14 @@ LOCAL_SRC_FILES += \
 	giz_blit_rev.s
 
 LOCAL_SRC_FILES += \
-	drivers/android/debug.c \
-	drivers/android/file.c \
-	drivers/android/netplay.c \
-	drivers/android/nesengine.cpp
+	../debug.c \
+	../file.c \
+	../netplay.c \
+	../nesengine.cpp
 
 LOCAL_C_INCLUDES += \
 	$(EMU_LIBRARY_PATH)/jni/libnativehelper/include/ \
-	$(EMU_LIBRARY_PATH)/jni/ \
-	external/zlib
+	$(EMU_LIBRARY_PATH)/jni/
 
 LOCAL_LDLIBS := -lz -llog
 
