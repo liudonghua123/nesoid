@@ -23,6 +23,7 @@ import android.preference.PreferenceScreen;
 import android.widget.Toast;
 
 import com.androidemu.FileChooser;
+import com.androidemu.GameKeyPreference;
 import com.androidemu.HelpActivity;
 
 import com.androidemu.nes.input.Keycodes;
@@ -92,7 +93,7 @@ public class EmulatorSettings extends PreferenceActivity implements
 
 		for (String key : getAllKeyPrefs())
 		{
-			KeyPreference pref = (KeyPreference) findPreference(key);
+			GameKeyPreference pref = (GameKeyPreference) findPreference(key);
 			mappings.put(key, Integer.valueOf(pref.getKeyValue()));
 		}
 		return mappings;
@@ -107,7 +108,7 @@ public class EmulatorSettings extends PreferenceActivity implements
 			Integer value = mappings.get(key);
 			if (value != null)
 			{
-				KeyPreference pref = (KeyPreference) findPreference(key);
+				GameKeyPreference pref = (GameKeyPreference) findPreference(key);
 				pref.setKey(value.intValue());
 				editor.putInt(key, value.intValue());
 			}
@@ -145,7 +146,7 @@ public class EmulatorSettings extends PreferenceActivity implements
 		PreferenceGroup group = (PreferenceGroup) findPreference("gamepad1");
 		for (int i = 0; i < gameKeysPref.length; i++)
 		{
-			KeyPreference pref = new KeyPreference(this);
+			GameKeyPreference pref = new GameKeyPreference(this);
 			pref.setKey(gameKeysPref[i]);
 			pref.setTitle(gameKeysName[i]);
 			pref.setDefaultValue(defaultKeys[i]);
@@ -155,7 +156,7 @@ public class EmulatorSettings extends PreferenceActivity implements
 		group = (PreferenceGroup) findPreference("gamepad2");
 		for (int i = 0; i < gameKeysPref2.length; i++)
 		{
-			KeyPreference pref = new KeyPreference(this);
+			GameKeyPreference pref = new GameKeyPreference(this);
 			pref.setKey(gameKeysPref2[i]);
 			pref.setTitle(gameKeysName[i]);
 			group.addPreference(pref);

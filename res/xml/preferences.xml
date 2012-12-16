@@ -251,16 +251,16 @@
 					android:summary="@string/use_input_method_summary"/>
 
 			<PreferenceScreen android:title="@string/shortcut_keys">
-				<com.androidemu.nes.KeyPreference
+				<com.androidemu.GameKeyPreference
 						android:key="quickLoad"
 						android:title="@string/quick_load"/>
-				<com.androidemu.nes.KeyPreference
+				<com.androidemu.GameKeyPreference
 						android:key="quickSave"
 						android:title="@string/quick_save"/>
-				<com.androidemu.nes.KeyPreference
+				<com.androidemu.GameKeyPreference
 						android:key="fastForward"
 						android:title="@string/fast_forward"/>
-				<com.androidemu.nes.KeyPreference
+				<com.androidemu.GameKeyPreference
 						android:key="screenshot"
 						android:title="@string/screenshot"/>
 			</PreferenceScreen>
