@@ -4,4 +4,5 @@
 /libs/
 project.properties
 .DS_Store
+lint.xml
 *~
